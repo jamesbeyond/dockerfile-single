@@ -22,7 +22,6 @@ RUN apt -y update && \
     astyle \
     mercurial \
     ninja-build \
-    libssl-dev \
     && apt clean && rm -rf /var/lib/apt/lists
 
 
