@@ -32,11 +32,6 @@ RUN pip3 install -U \
     mbed-tools \
     awscli
 
-# Set up mbed environment
-WORKDIR /root/
-RUN wget https://github.com/ARMmbed/mbed-os/raw/master/requirements.txt && \
-    pip3 install -r requirements.txt
-
 # ------------------------------------------------------------------------------
 # Install updated cmake - refer https://cmake.org/install/ 
 COPY cmake-3.20.0-rc3-Linux-x86_64.sh /tmp
