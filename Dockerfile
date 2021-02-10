@@ -22,7 +22,6 @@ RUN apt -y update && \
     astyle \
     mercurial \
     ninja-build \
-    libssl-dev \
     && apt clean && rm -rf /var/lib/apt/lists
 
 
@@ -40,8 +39,8 @@ RUN wget https://github.com/ARMmbed/mbed-os/raw/master/requirements.txt && \
 
 # ------------------------------------------------------------------------------
 # Install updated cmake - refer https://cmake.org/install/ 
-COPY cmake-3.19.0-rc3-Linux-x86_64.sh /tmp
-RUN sh /tmp/cmake-3.19.0-rc3-Linux-x86_64.sh --exclude-subdir --prefix=/usr/local
+COPY cmake-3.20.0-rc3-Linux-x86_64.sh /tmp
+RUN sh /tmp/cmake-3.20.0-rc3-Linux-x86_64.sh --exclude-subdir --prefix=/usr/local
 
 # ------------------------------------------------------------------------------
 # Install arm-none-eabi-gcc
