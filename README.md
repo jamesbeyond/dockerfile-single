@@ -1,0 +1,1 @@
+# This is for single Docker repository per git repo
